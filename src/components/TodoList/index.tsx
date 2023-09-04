@@ -9,7 +9,7 @@ import { Todos } from '../../store/TodosStore.ts';
 
 const TodoList = () => {
   const { todos, getTodos } = useTodosStore();
-  const [listItems, setListItems] = useState<Todos[]>([]);
+  const [listItems, setListItems] = useState<Todos[]>(todos);
   const [page, setPage] = useState<number>(1);
 
   const ref = useRef<HTMLDivElement | null>(null);
