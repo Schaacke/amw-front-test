@@ -1,0 +1,87 @@
+@use 'src/styles/variables';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 263px;
+
+  &__control {
+    width: 100%;
+    display: flex;
+    height: max-content;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: variables.$green;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebeef6;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #dde2f1;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #7b8aab;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #555555;
+    box-sizing: border-box;
+  }
+
+  &__iterated {
+    height: 700px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: variables.$neutral-gray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: variables.$primary-gray-dark;
+      border-radius: 100px;
+    }
+  }
+
+  &__pagination {
+    padding: 20px;
+  }
+}

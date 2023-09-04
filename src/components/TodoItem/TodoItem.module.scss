@@ -1,0 +1,67 @@
+@use 'src/styles/variables';
+
+.item {
+  padding: 4px;
+  border-radius: 7px;
+  background: #f4f8ff;
+
+  &__card {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+
+  &__title {
+    color: variables.$blue;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__dates {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    color: variables.$green;
+  }
+
+  &__desc {
+    color: variables.$text;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-top: 5px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &__meta {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    filter: grayscale(1);
+    image-rendering: crisp-edges;
+  }
+}

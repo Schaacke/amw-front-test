@@ -1,0 +1,15 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app {
+  padding: 92px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  transition: 0.2s;
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+@use 'src/styles/variables';
+
+.tags {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  max-width: 80%;
+
+  &__item {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: variables.$white;
+    background: variables.$statuses-entity-tag;
+  }
+
+  &__direction {
+    position: relative;
+    color: variables.$primary-gray-dark;
+    background: variables.$neutral-gray;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      width: 12px;
+      height: 100%;
+      background-image: url('../../assets/icons/tag-pointer.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}
