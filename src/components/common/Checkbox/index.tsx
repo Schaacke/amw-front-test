@@ -5,22 +5,17 @@ import styles from './Checkbox.module.scss';
 
 type Props = {
   name?: string;
-  className?: string;
   checked?: boolean;
   value?: string | ReadonlyArray<string> | number;
   onChange: ChangeEventHandler<HTMLInputElement>;
 };
 
-const Checkbox = ({ name, className, checked, value, onChange }: Props) => {
+const Checkbox = ({ name, checked, value, onChange }: Props) => {
   return (
     <label
-      className={classNames(
-        styles.checkbox,
-        {
-          [styles.checked]: checked,
-        },
-        className,
-      )}
+      className={classNames(styles.checkbox, {
+        [styles.checkbox__checked]: checked,
+      })}
     >
       <span className={styles.checkbox__switch}>
         <CheckIcon className={styles.checkbox__icon} />

@@ -21,7 +21,7 @@
     visibility: hidden;
   }
 
-  &.checked {
+  &__checked {
     .checkbox__switch {
       background-color: #3d8fec;
       border: 1px solid transparent;
