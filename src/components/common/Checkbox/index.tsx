@@ -14,7 +14,7 @@ const Checkbox = ({ name, checked, value, onChange }: Props) => {
   return (
     <label
       className={classNames(styles.checkbox, {
-        [styles.checkbox__checked]: checked,
+        [styles.checked]: checked,
       })}
     >
       <span className={styles.checkbox__switch}>

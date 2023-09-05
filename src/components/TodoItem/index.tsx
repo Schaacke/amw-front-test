@@ -12,7 +12,7 @@ type Props = {
 };
 
 const TodoItem = ({ title, completed }: Props) => {
-  const [check, setCheck] = useState(completed ?? false);
+  const [check, setCheck] = useState(false);
   const [description, setDescription] = useState<string>();
   const [date, setDate] = useState<{ startDate: Date; endDate: Date }>();
   const [tags, setTags] = useState<TagsData>();
@@ -35,7 +35,7 @@ const TodoItem = ({ title, completed }: Props) => {
     <div className={styles.item}>
       <div className={styles.item__card}>
         <div className={styles.item__title}>
-          <Checkbox onChange={() => setCheck(!check)} checked={check} /> {title}
+          <Checkbox onChange={() => setCheck(!check)} checked={completed} /> {title}
         </div>
         <div className={styles.item__dates}>
           <span>{moment(date?.startDate).format('MMM D, HH:MM A')}</span>
