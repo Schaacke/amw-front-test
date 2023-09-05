@@ -12,7 +12,7 @@ type Props = {
 };
 
 const TodoItem = ({ title, completed }: Props) => {
-  const [check, setCheck] = useState(completed);
+  const [check, setCheck] = useState(completed ?? false);
   const [description, setDescription] = useState<string>();
   const [date, setDate] = useState<{ startDate: Date; endDate: Date }>();
   const [tags, setTags] = useState<TagsData>();
