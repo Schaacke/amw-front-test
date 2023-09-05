@@ -15,12 +15,14 @@ export class TodosStore {
   loading: boolean;
   error: boolean;
   todos: Todos[];
+  loaded: boolean;
 
   constructor(root: RootStore) {
     this.rootStore = root;
     this.loading = false;
     this.error = false;
     this.todos = [];
+    this.loaded = false;
     makeAutoObservable(this, {}, { autoBind: true });
   }
 
@@ -33,7 +35,9 @@ export class TodosStore {
   };
 
   setTodosData = (data: Todos[]) => {
-    this.todos = [...data];
+    const tempArr = [...this.todos, ...data];
+    this.todos = [...new Map(tempArr.map((item) => [item.id, item])).values()];
+    if (data.length === 0) this.loaded = true;
   };
 
   getTodos = async (page: number) => {
