@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from 'react';
 import { ReactComponent as CheckIcon } from '../../../assets/icons/check.svg';
-import * as classNames from 'classnames';
+import classnames from 'classnames';
 import styles from './Checkbox.module.scss';
 
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
 const Checkbox = ({ name, checked, value, onChange }: Props) => {
   return (
     <label
-      className={classNames(styles.checkbox, {
+      className={classnames(styles.checkbox, {
         [styles.checked]: checked,
       })}
     >
